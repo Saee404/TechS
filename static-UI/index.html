@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Swastech — Medicine, appointments, advice — all in one click.</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <img src="headerlogo.png" alt="SwasTech" class="logo-img" />
+        <span class="tagline">Medicine, appointments, advice — all in one click.</span>
+      </a>
+      <nav class="main-nav">
+        <a href="#features">Features</a>
+        <a href="#consult">Consult</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="menuBtn" class="menu-btn" aria-label="Open menu">Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-content">
+        <h1>Telemedicine for Nabha villages</h1>
+        <p class="lead">Multilingual video consultations, offline health records, real-time medicine availability and a lightweight symptom checker.</p>
+        <div class="cta-row">
+          <!-- Updated Book Consultation button to open WhatsApp -->
+          <a class="btn primary" href="https://wa.me/918010410922?text=Hi! I want to book a consultation" target="_blank">
+            Book a consultation
+          </a>
+          <a class="btn ghost" href="#features">Learn more</a>
+        </div>
+      </div>
+      <div class="hero-illustration">
+        <img src="logo.png" alt="SwasTech app logo" />
+      </div>
+    </section>
+
+    <section id="features" class="features container">
+      <h2>Key features</h2>
+      <div class="grid">
+        <a href="video.html" class="card">
+          <h3>Video consultations</h3>
+          <p>Low-bandwidth optimized video calls and local language support.</p>
+        </a>
+        <a href="records.html" class="card">
+          <h3>Offline health records</h3>
+          <p>Patient records that sync when connectivity is available.</p>
+        </a>
+        <a href="medicine.html" class="card">
+          <h3>Medicine availability</h3>
+          <p>Real-time inventory updates from local pharmacies and primary health centers.</p>
+        </a>
+      </div>
+    </section>
+
+    <section id="consult" class="consult container">
+      <h2>Quick symptom checker</h2>
+      <form id="symptomForm" class="symptom-form">
+        <label>
+          Age
+          <input name="age" type="number" min="0" required />
+        </label>
+        <label>
+          Symptoms (comma separated)
+          <input name="symptoms" type="text" required />
+        </label>
+        <button class="btn primary" type="submit">Check</button>
+      </form>
+
+      <div id="result" class="result" aria-live="polite" hidden>
+        <!-- Results inserted by app.js -->
+      </div>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2>Contact & deployment</h2>
+      <p>To host this static UI: deploy static-ui/ to GitHub Pages or any static host (Vercel/Netlify).</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Swastech — All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Include app.js -->
+  <script src="app.js"></script>
+</body>
+</html>
